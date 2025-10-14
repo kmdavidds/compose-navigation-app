@@ -4,8 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.navigation
-import com.example.composenavigationapp.ui.screens.PlaceholderHomeScreen
 import com.example.composenavigationapp.ui.screens.SplashScreen
 
 @Composable
@@ -27,11 +25,8 @@ fun RootNavGraph(
             )
                 }
 
-        navigation(
-            startDestination = Routes.HOME,
-            route = Routes.MAIN_GRAPH
-        ) {
-            composable(Routes.HOME) { PlaceholderHomeScreen() }
+        composable(Routes.MAIN_GRAPH) {
+            MainScaffold()
         }
     }
 }
