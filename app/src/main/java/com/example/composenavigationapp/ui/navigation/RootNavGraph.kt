@@ -5,6 +5,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.composenavigationapp.ui.screens.PlaceholderHomeScreen
+import com.example.composenavigationapp.ui.screens.SplashScreen
 
 @Composable
 fun RootNavGraph(
@@ -15,15 +17,15 @@ fun RootNavGraph(
         startDestination = Routes.SPLASH
     ) {
         composable(Routes.SPLASH) {
-            _root_ide_package_.android.window.SplashScreen(
+            SplashScreen(
                 onFinished = {
-                    navController.navigate(Routes.MAIN_GRAPH) {
-                        popUpTo(Routes.SPLASH) { inclusive = true }
+                    navController.navigate(Routes.MAIN_GRAPH){
+                        popUpTo(Routes.SPLASH){ inclusive = true}
                         launchSingleTop = true
                     }
                 }
             )
-        }
+                }
 
         navigation(
             startDestination = Routes.HOME,
