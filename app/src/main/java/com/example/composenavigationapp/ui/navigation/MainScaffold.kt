@@ -15,6 +15,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
+import com.example.composenavigationapp.ui.screens.AboutScreen
 import com.example.composenavigationapp.ui.screens.AddScreen
 import com.example.composenavigationapp.ui.screens.DetailScreen
 import com.example.composenavigationapp.ui.screens.HelpScreen
@@ -157,5 +158,7 @@ private fun MainNavHost(navController: NavHostController) {
         composable(Routes.SETTINGS) { SettingsScreen() }
         composable(Routes.ADD) { AddScreen(navController) }
         composable(Routes.HELP) { HelpScreen(navController) }
+        composable(Routes.ABOUT) { AboutScreen(navController) }
+
     }
 }

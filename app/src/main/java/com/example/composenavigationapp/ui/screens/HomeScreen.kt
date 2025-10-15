@@ -5,8 +5,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Help
 import androidx.compose.material.icons.automirrored.filled.HelpOutline
+import androidx.compose.material.icons.filled.Help
 import androidx.compose.material.icons.filled.HelpOutline
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -52,9 +55,12 @@ fun HomeScreen(navController: NavController) {
             TopAppBar(
                 title = { Text("Home") },
                 actions = {
+                    IconButton(onClick = { navController.navigate(Routes.ABOUT) }) {
+                        Icon(Icons.Filled.Info, contentDescription = "Tentang")
+                    }
                     IconButton(onClick = { navController.navigate(Routes.HELP) }) {
                         Icon(
-                            imageVector = Icons.Filled.HelpOutline,
+                            imageVector = Icons.Filled.Help,
                             contentDescription = "Help"
                         )
                     }

@@ -9,5 +9,6 @@ object Routes {
     const val ADD = "add"
     const val MAIN_GRAPH = "main_graph"
     const val HELP = "help"
+    const val ABOUT = "about"
 
 }
