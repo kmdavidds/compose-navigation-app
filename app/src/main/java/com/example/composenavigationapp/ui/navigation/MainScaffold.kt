@@ -17,6 +17,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
 import com.example.composenavigationapp.ui.screens.AddScreen
 import com.example.composenavigationapp.ui.screens.DetailScreen
+import com.example.composenavigationapp.ui.screens.HelpScreen
 import com.example.composenavigationapp.ui.screens.HomeScreen
 import com.example.composenavigationapp.ui.screens.ProfileScreen
 import com.example.composenavigationapp.ui.screens.SettingsScreen
@@ -155,5 +156,6 @@ private fun MainNavHost(navController: NavHostController) {
         composable(Routes.PROFILE) { ProfileScreen() }
         composable(Routes.SETTINGS) { SettingsScreen() }
         composable(Routes.ADD) { AddScreen(navController) }
+        composable(Routes.HELP) { HelpScreen(navController) }
     }
 }

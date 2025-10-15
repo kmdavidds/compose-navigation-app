@@ -19,18 +19,13 @@ import androidx.navigation.compose.rememberNavController
 import com.example.composenavigationapp.ui.navigation.Routes
 
 @Preview(
-    name = "Onboarding – Dark",
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    showBackground = true,
-    backgroundColor = 0xFF000000
+  showBackground = true,
 )
 
 @Composable
-fun OnboardingPreviewDark() {
+fun OnboardingPreview() {
     val navController = rememberNavController()
-    MaterialTheme(colorScheme = darkColorScheme()) {
-        OnboardingScreen(navController)
-    }
+    OnboardingScreen(navController)
 }
 
 @Composable
