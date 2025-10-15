@@ -17,6 +17,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
 import com.example.composenavigationapp.ui.screens.AddScreen
 import com.example.composenavigationapp.ui.screens.DetailScreen
+import com.example.composenavigationapp.ui.screens.HomeScreen
 import com.example.composenavigationapp.ui.screens.ProfileScreen
 import com.example.composenavigationapp.ui.screens.SettingsScreen
 import kotlinx.coroutines.launch
